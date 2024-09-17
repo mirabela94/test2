@@ -32,6 +32,10 @@ public class HomePage{
 //        navigateTo("https://magento.softwaretestingboard.com/");
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ab13cc37fb18520cd61f6c4568c33526ff451e96
     public void clickCreateAccount() {
         wait.until(ExpectedConditions.elementToBeClickable(createAccountLink)).click();
     }
@@ -45,6 +49,7 @@ public class HomePage{
         newAccount.click();
     }
 
+<<<<<<< HEAD
     public int getCartItemsCount() {
 
         // XPath pentru elementul care conține numărul de produse
@@ -68,6 +73,8 @@ public class HomePage{
             System.out.println("Nu sunt produse în coș.");
         }
     }
+=======
+>>>>>>> ab13cc37fb18520cd61f6c4568c33526ff451e96
 
     public void hoverToMenMenu() throws InterruptedException {
         Thread.sleep(500);

@@ -1,11 +1,17 @@
 package com.magento.softwaretestingboard.tests;
 
 
+<<<<<<< HEAD
 import com.magento.softwaretestingboard.pages.ViewAndEditCart;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
+=======
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+>>>>>>> ab13cc37fb18520cd61f6c4568c33526ff451e96
 public class EcommerceShoppingFlowTest extends BaseTest {
 
     //     Test 2: Add 2 Products to the Shopping Cart and Proceed to Checkout
@@ -19,6 +25,7 @@ public class EcommerceShoppingFlowTest extends BaseTest {
             loginPage.enterRegisteredPassword("tudoranmirabela123!");
 
             loginPage.clickSignInButton();
+<<<<<<< HEAD
            // wait(10);
 
 
@@ -29,6 +36,12 @@ public class EcommerceShoppingFlowTest extends BaseTest {
             homePage.clickOnJackets();
 
 
+=======
+            homePage.hoverToMenMenu();
+            homePage.hoverToTops();
+            homePage.clickOnJackets();
+
+>>>>>>> ab13cc37fb18520cd61f6c4568c33526ff451e96
             menJacketsPage.addToCartBlackXLFitnessJackshirt();
 //            // Assert the addition of 'Proteus Fitness JackShirt' product to the shopping cart.
             Assert.assertEquals(menJacketsPage.getSuccessMessageFitnessJackshirt(), "You added Proteus Fitness Jackshirt to your shopping cart.",
@@ -40,11 +53,19 @@ public class EcommerceShoppingFlowTest extends BaseTest {
                     "'Montana Wind Jacket' product was not added to the shopping cart.");
 
             menJacketsPage.clickProceedToCheckout();
+<<<<<<< HEAD
           // Assert that the user is redirected to 'Checkout' page.
             Assert.assertTrue(checkoutShippingPage.isOnCheckoutPage(),
                     "User is NOT redirected to the 'Checkout' page");
 
            // Assert that the Order Summary on the Checkout page correctly displays the number of items added.
+=======
+//            // Assert that the user is redirected to 'Checkout' page.
+            Assert.assertTrue(checkoutShippingPage.isOnCheckoutPage(),
+                    "User is NOT redirected to the 'Checkout' page");
+
+//            // Assert that the Order Summary on the Checkout page correctly displays the number of items added.
+>>>>>>> ab13cc37fb18520cd61f6c4568c33526ff451e96
            // Assert.assertEquals(checkoutShippingPage.getCartSummaryItemsCount(), "2",
            //         "Order Summary on the Checkout page DID NOT correctly display the number of added items.");
 

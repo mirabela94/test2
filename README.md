@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # test2
 
 This is a try for automated test 
+=======
+# test2# test2
+
+This is a try for automated test
+>>>>>>> ab13cc37fb18520cd61f6c4568c33526ff451e96
 
 
 Testarea procesului complet de plasare a unei comenzi reușite
