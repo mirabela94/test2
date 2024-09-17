@@ -32,7 +32,6 @@ public class HomePage{
 //        navigateTo("https://magento.softwaretestingboard.com/");
     }
 
-
     public void clickCreateAccount() {
         wait.until(ExpectedConditions.elementToBeClickable(createAccountLink)).click();
     }
@@ -46,6 +45,29 @@ public class HomePage{
         newAccount.click();
     }
 
+    public int getCartItemsCount() {
+
+        // XPath pentru elementul care conține numărul de produse
+        // WebElement totalItemsInCart = wait.until(ExpectedConditions.visibilityOfElementLocated(itemsInCartTotal));
+
+        WebElement cartNumberItem = driver.findElement(By.xpath("//span[@class='counter-number']"));
+        System.out.println("aaaaa textul: " + cartNumberItem );
+        String cartItemsText = cartNumberItem.getText().trim();  // Extrage textul și elimină spațiile
+        System.out.println("aaaaabbbbbb textul: " + cartItemsText );
+        int i = Integer.parseInt(cartItemsText);
+        System.out.println("aaaaabbbbbb cccc textul: " + i );
+
+        return Integer.parseInt(cartItemsText);  // Convertim textul în număr întreg
+
+    }
+    public void checkCartItems() {
+        int cartItemsCount = getCartItemsCount();
+        if (cartItemsCount > 0) {
+            System.out.println("Sunt " + cartItemsCount + " produse în coș.");
+        } else {
+            System.out.println("Nu sunt produse în coș.");
+        }
+    }
 
     public void hoverToMenMenu() throws InterruptedException {
         Thread.sleep(500);

@@ -1,8 +1,10 @@
 package com.magento.softwaretestingboard.tests;
 
 
+import com.magento.softwaretestingboard.pages.ViewAndEditCart;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class EcommerceShoppingFlowTest extends BaseTest {
 
@@ -17,9 +19,15 @@ public class EcommerceShoppingFlowTest extends BaseTest {
             loginPage.enterRegisteredPassword("tudoranmirabela123!");
 
             loginPage.clickSignInButton();
+           // wait(10);
+
+
+
             homePage.hoverToMenMenu();
+           // homePage.checkCartItems();
             homePage.hoverToTops();
             homePage.clickOnJackets();
+
 
             menJacketsPage.addToCartBlackXLFitnessJackshirt();
 //            // Assert the addition of 'Proteus Fitness JackShirt' product to the shopping cart.
@@ -32,11 +40,11 @@ public class EcommerceShoppingFlowTest extends BaseTest {
                     "'Montana Wind Jacket' product was not added to the shopping cart.");
 
             menJacketsPage.clickProceedToCheckout();
-//            // Assert that the user is redirected to 'Checkout' page.
+          // Assert that the user is redirected to 'Checkout' page.
             Assert.assertTrue(checkoutShippingPage.isOnCheckoutPage(),
                     "User is NOT redirected to the 'Checkout' page");
 
-//            // Assert that the Order Summary on the Checkout page correctly displays the number of items added.
+           // Assert that the Order Summary on the Checkout page correctly displays the number of items added.
            // Assert.assertEquals(checkoutShippingPage.getCartSummaryItemsCount(), "2",
            //         "Order Summary on the Checkout page DID NOT correctly display the number of added items.");
 
